@@ -4,20 +4,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Verdemapu</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles.css" type="text/css">
 </head>
 <body>
     <nav class="navegacion">
+        <div class="nav-bar-toggle">
+            <label class="toggle-nav-bar"for="expand-nav-bar"></label>
+            <input id="expand-nav-bar" type="checkbox">
+        </div>
         <div class="inicio">
-            <a href="" class="perfil">CUENTA</a>
             <a href="" class="logo-texto">Verdemapu</a>
+            <!--<a href="" class="perfil">CUENTA</a>-->
+            <button class="btn btn-sign-up">Ingresar</button>
         </div>
         <ul class="links">
-            <li><a href="">TIERRA</a></li>
-            <li><a href="">CIELO</a></li>
-            <li><a href="">CUERPO</a></li>
+            <li class= "opcion"><a href="">TIERRA</a><div class="selector"></div></li>
+            <li class="opcion"><a href="">CIELO</a><div class="selector"></div></li>
+            <li class="opcion"><a href="">CUERPO</a><div class="selector"></div></li>
         </ul>
-        <div class="logo"></div>
+        <div class="logo-container">
+            <svg class="logo-img" width="187" height="177" viewBox="0 0 187 177" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M93.7932 117.321C88.9081 111.595 75.269 100.145 59.7932 100.145C40.4484 100.145 33.4139 113.245 33.4139 119.65C33.4139 126.054 42.207 140.901 59.7932 140.901C80.3104 140.901 88.3219 132.168 93.7932 127.801C99.2645 132.168 107.276 140.901 127.793 140.901C145.379 140.901 154.172 126.054 154.172 119.65C154.172 113.245 147.138 100.145 127.793 100.145C112.317 100.145 98.6782 111.595 93.7932 117.321ZM59.7932 107.423C72.2208 107.423 82.9484 116.738 86.7587 121.396C83.2415 125.278 72.9242 133.041 59.7932 133.041C43.3794 133.041 42.207 122.561 42.207 119.65C42.207 116.738 44.2587 107.423 59.7932 107.423ZM127.793 107.423C115.366 107.423 104.638 116.738 100.828 121.396C104.345 125.278 114.662 133.041 127.793 133.041C144.207 133.041 145.379 122.561 145.379 119.65C145.379 116.738 143.328 107.423 127.793 107.423Z" fill="url(#paint0_linear)"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M92.9139 41.3388C104.407 41.3388 113.724 32.0848 113.724 20.6694C113.724 9.25401 104.407 0 92.9139 0C81.4206 0 72.1035 9.25401 72.1035 20.6694C72.1035 32.0848 81.4206 41.3388 92.9139 41.3388ZM93.5001 32.6053C100.461 32.6053 106.104 27.0007 106.104 20.0872C106.104 13.1736 100.461 7.56908 93.5001 7.56908C86.5394 7.56908 80.8966 13.1736 80.8966 20.0872C80.8966 27.0007 86.5394 32.6053 93.5001 32.6053Z" fill="url(#paint1_linear)"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M93.2069 105.385C84.1207 99.2714 58.9138 83.0346 58.9138 65.7935C58.9138 48.5524 73.2758 45.1233 82.9482 45.1233C86.3678 45.7056 93.2069 47.4523 93.2069 49.7812C93.2069 47.6852 99.4597 45.8021 102.586 45.1226C112.259 45.1226 126.621 48.5516 126.621 65.7927C126.621 86.2875 101.414 98.9803 93.2069 105.385ZM67.4138 65.7935C67.4138 77.904 84.6092 90.0526 93.2069 94.6135C101.805 90.0526 119 77.9033 119 65.7927C119 57.9942 112.448 54.4673 105.81 54.4391C99.5632 54.4126 93.2069 57.5797 93.2069 60.2615C93.2069 57.5797 86.8505 54.4134 80.6034 54.4399C73.9658 54.4681 67.4138 57.995 67.4138 65.7935Z" fill="url(#paint2_linear)"/>
+                <path d="M153 23.8717C155.931 24.454 160.328 29.6941 162.086 32.8964C163.845 36.0987 164.138 33.1875 164.431 31.1497C164.724 29.1118 164.724 18.0493 155.931 14.5559C150.772 12.6928 139.713 13.1974 134.828 13.6826C137.661 16.0115 143.386 21.9503 143.621 27.074C143.914 33.4786 154.759 36.3898 160.914 33.7697C162.966 32.8964 155.052 24.7451 153 23.8717Z" fill="url(#paint3_linear)"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M92.83 0.00219727C41.4998 0.343156 0 39.8343 0 88.5C0 137.377 41.8614 177 93.5 177C145.139 177 187 137.377 187 88.5C187 66.4746 178.499 46.3285 164.434 30.8405C163.66 31.4866 162.851 32.1086 162.009 32.7049C174.695 47.3298 182.31 66.0532 182.31 86.4622C182.31 133.249 142.286 171.178 92.9138 171.178C43.5415 171.178 3.51728 133.249 3.51728 86.4622C3.51728 39.9116 43.1379 2.13035 92.1659 1.74963C92.3656 1.16039 92.5872 0.577739 92.83 0.00219727Z" fill="url(#paint4_linear)"/>
+                <defs>
+                <linearGradient id="paint0_linear" x1="-65.6489" y1="180.977" x2="-41.2369" y2="53.6828" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#F9EA0F"/>
+                <stop offset="1" stop-color="#96C11E"/>
+                </linearGradient>
+                <linearGradient id="paint1_linear" x1="-61.6702" y1="138.219" x2="178.146" y2="11.479" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#F9EA0F"/>
+                <stop offset="1" stop-color="#96C11E"/>
+                </linearGradient>
+                <linearGradient id="paint2_linear" x1="-22.8776" y1="174.017" x2="118.123" y2="36.4141" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#F9EA0F"/>
+                <stop offset="1" stop-color="#96C11E"/>
+                </linearGradient>
+                <linearGradient id="paint3_linear" x1="-9.94669" y1="152.14" x2="117.517" y2="-21.3054" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#F9EA0F"/>
+                <stop offset="1" stop-color="#96C11E"/>
+                </linearGradient>
+                <linearGradient id="paint4_linear" x1="-4.17962e-06" y1="177" x2="186.947" y2="-0.0560734" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#F9EA0F"/>
+                <stop offset="1" stop-color="#96C11E"/>
+                </linearGradient>
+                </defs>
+            </svg>
+        </div>
     </nav>
     <script src="./app.js" type="text/javascript"></script>    
 </body>

@@ -1,0 +1,204 @@
+/***********************
+*Tabla de Contenidos:
+*   1. Generalidades
+*   2. Barra Navegación
+*       - Toggle Barra Navegación / Abierta
+*       - Toggle Barra Navegación / Cerrada
+*       - Cuenta Navegación
+*       - Links Navegación  
+*       - Logo Navegación
+***********************/
+
+/**********************
+*    Generalidades
+**********************/
+:root{
+    --primary-color:#F9EA0F;
+    --background-light: #ABE346;
+    --background-dark: #669614;
+    --card-background: #262A2B;
+    --primary-font:'Roboto', sans-serif;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    background: linear-gradient(180deg,var(--background-light) 0%, var(--background-dark) 100%);
+}
+/***********************
+*  Barra Navegación      
+***********************/
+.navegacion{
+    position: relative;
+    width: 50vw;
+    max-width: 250px;
+    min-width: 130px;
+    height: 100vh;
+    background: var(--card-background);
+    color: var(--primary-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+/***********************
+*  Toggle Barra Navegación / Abierto      
+***********************/
+.nav-bar-toggle{
+    position: absolute;
+    top: 50px ;
+    right: -50px;
+    width: 50px;
+    height: 50px;
+    border-radius: 0 1rem 1rem 0;
+    background-color: var(--card-background);
+}
+#expand-nav-bar{
+    opacity: 0;
+}
+.toggle-nav-bar,
+.toggle-nav-bar:before,
+.toggle-nav-bar:after{
+    position: absolute;
+    height: 4px;
+    border-radius: 1rem;
+    background-color: var(--primary-color);
+}
+.toggle-nav-bar{
+    display: block;
+    width: 40px;
+    top: 22px;
+}
+.toggle-nav-bar::before,
+.toggle-nav-bar::after{
+    content: '';
+    left: -4px;
+    width: 20px;
+}
+.toggle-nav-bar::after{
+    top: 6px;
+    transform: rotate(45deg)
+}
+.toggle-nav-bar::before{
+    top: -6px;
+    transform: rotate(-45deg);
+}
+/***********************
+*  Toggle Barra Navegación / Cerrado      
+***********************/
+
+/***********************
+*  Cuenta Navegación      
+***********************/
+.inicio{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.logo-texto{
+    font-family: var(--primary-font);
+    text-decoration: none;
+    color: var(--primary-color);
+    padding: 0.8rem;
+    font-size: 1.5rem;
+}
+.btn-sign-up{
+    font-family: var(--primary-font);
+    padding: 0.5rem 1.5rem;
+    color: var(--primary-color);
+    background-color: var(--card-background);
+    border: solid var(--primary-color) 2px;
+    border-radius: 7px;
+}
+.btn-sign-up:hover{
+    background-color: var(--primary-color);
+    color: var(--card-background);
+}
+/***********************
+*  Links Navegación      
+***********************/
+.links{
+    list-style: none;
+}
+.links > li > a{
+    font-size: 22px;
+    text-decoration: none;
+    font-family: var(--primary-font);
+    color: var(--primary-color);
+}
+.opcion{
+    display: flex;
+    flex-direction: column;
+    padding: 3em 0;
+    justify-content: center;
+    align-items: center;
+}
+.opcion:hover >.selector{
+    background-color: var(--primary-color);
+}
+.seleccionado > a{
+    color: white !important;
+}
+.seleccionado >.selector{
+    background-color: white;
+}
+.selector{
+    height: 2px;
+    width: 100%;
+}
+/***********************
+*  Logo Navegación      
+***********************/
+.logo-container{
+    box-sizing: content-box;
+    position: relative; 
+    height: 98px; 
+    width: 80%; 
+    max-width: 104px;
+    margin: 0.5rem;
+    padding: 0;
+}
+.logo-img{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+
+
+/**************************
+***************************
+*  HAMBURGUER
+***************************
+***************************
+.toggle-nav-bar,
+.toggle-nav-bar:before,
+.toggle-nav-bar:after{
+    position: absolute;
+    width: 40px;
+    height: 4px;
+    border-radius: 1rem;
+    background-color: var(--primary-color);
+}
+.toggle-nav-bar{
+    display: block;
+    top: 22px;
+}
+.toggle-nav-bar::before,
+.toggle-nav-bar::after{
+    content: '';
+}
+.toggle-nav-bar::after{
+    top: 10px;
+}
+.toggle-nav-bar::before{
+    top: -10px;
+}
+
+*/
